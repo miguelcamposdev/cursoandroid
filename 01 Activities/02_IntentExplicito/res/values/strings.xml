@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IntentExplicito</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="btn_open_second_activity">Abrir Activity Secundario</string>
+    <string name="txt_second_activity">Estás en el Activity Secundario</string>
+
+</resources>

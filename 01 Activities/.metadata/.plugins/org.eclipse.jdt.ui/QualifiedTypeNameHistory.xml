@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="android.R.layout"/>
+<fullyQualifiedTypeName name="com.miguelcr.cursoandroid.helloworld.PrincipalActivity"/>
+<fullyQualifiedTypeName name="com.miguelcr.cursoandroid.helloworld.SecActivity"/>
+<fullyQualifiedTypeName name="com.miguelcr.cursoandroid.intro.R.layout"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="com.miguelcr.cursoandroid.intro.R.id"/>
+<fullyQualifiedTypeName name="com.miguelcr.cursoandroid.intro.R.drawable"/>
+<fullyQualifiedTypeName name="com.miguelcr.cursoandroid.intro.SecondaryActivity"/>
+<fullyQualifiedTypeName name="com.miguelcr.cursoandroid.mycustombrowser.R.id"/>
+<fullyQualifiedTypeName name="android.webkit.WebView"/>
+<fullyQualifiedTypeName name="com.miguelcr.cursoandroid.mycustombrowser.PruebaUrlActivity"/>
+<fullyQualifiedTypeName name="com.miguelcr.pasodeparametros.MostrarNombreActivity"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="android.net.Uri"/>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="android.view.View.OnKeyListener"/>
+<fullyQualifiedTypeName name="com.miguelcr.miguelbrowser.R.drawable"/>
+<fullyQualifiedTypeName name="com.miguelcr.miguelbrowser.R.id"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="android.provider.Contacts"/>
+<fullyQualifiedTypeName name="android.provider.ContactsContract.Contacts"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="android.provider.ContactsContract.CommonDataKinds.Phone"/>
+</qualifiedTypeNameHistroy>

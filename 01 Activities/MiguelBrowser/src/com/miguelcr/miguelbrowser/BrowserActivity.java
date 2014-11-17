@@ -1,0 +1,23 @@
+package com.miguelcr.miguelbrowser;
+
+import android.app.Activity;
+import android.net.Uri;
+import android.os.Bundle;
+import android.webkit.WebView;
+
+public class BrowserActivity extends Activity {
+	
+	WebView navegador;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_browser);
+		
+		navegador = (WebView) findViewById(R.id.webViewUrl);
+		
+		Uri data = getIntent().getData();
+		
+		navegador.loadUrl(data.toString());
+	}
+}

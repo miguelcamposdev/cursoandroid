@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">03_onActivityResult</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_suma">SumaActivity</string>
+    <string name="title_activity_resta">RestaActivity</string>
+
+</resources>

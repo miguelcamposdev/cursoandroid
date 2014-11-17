@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MiguelBrowser</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="titulo_main">Mi Navegador</string>
+    <string name="label_intro_url">Introduzca una URL</string>
+    <string name="btn_abrir_url">Abrir URL en Navegador</string>
+    <string name="title_activity_browser">BrowserActivity</string>
+
+</resources>

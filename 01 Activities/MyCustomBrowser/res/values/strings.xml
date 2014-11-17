@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyCustomBrowser</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="label_insert_url">Escribe una URL</string>
+    <string name="btn_open_url">Abrir URL en navegador</string>
+    <string name="title_activity_miguel_browser">MiguelBrowserActivity</string>
+
+</resources>

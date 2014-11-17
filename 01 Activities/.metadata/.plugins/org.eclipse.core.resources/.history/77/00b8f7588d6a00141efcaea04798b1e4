@@ -1,0 +1,39 @@
+package com.miguelcr.cursoandroid.mycustombrowser;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.View;
+import android.widget.EditText;
+
+public class PruebaUrlActivity extends Activity {
+	
+	EditText url;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_prueba_url);
+        
+        url = (EditText) findViewById(R.id.editTextUrl);
+        
+        url.setOnKeyListener(new View.OnKeyListener() {
+			
+			@Override
+			public boolean onKey(View v, int keyCode, KeyEvent event) {
+				// TODO Auto-generated method stub
+				return false;
+			}
+		});
+    }
+    
+    public void abrirUrl(View v) {
+    	// Rescatamos la URL escrita por el usuario
+    	String urlUsuario = url.getText().toString();
+    	
+    	Intent i = new Intent(Intent.ACTION_VIEW,Uri.parse(urlUsuario));
+    	startActivity(i);
+    }
+}

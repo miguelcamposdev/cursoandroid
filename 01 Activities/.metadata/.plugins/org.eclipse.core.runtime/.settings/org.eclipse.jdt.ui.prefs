@@ -1,0 +1,19 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="android.content.Context"><rhs name\="com.miguelcr.cursoandroid.helloworld.PrincipalActivity"/><rhs name\="com.miguelcr.cursoandroid.mycustombrowser.PruebaUrlActivity"/></lhs><lhs name\="android.widget.TextView"><rhs name\="android.widget.TextView"/><rhs name\="android.widget.EditText"/></lhs><lhs name\="android.view.ViewTreeObserver$OnPreDrawListener"><rhs name\="android.widget.TextView"/><rhs name\="android.widget.EditText"/></lhs><lhs name\="android.view.View"><rhs name\="android.webkit.WebView"/><rhs name\="android.widget.TextView"/><rhs name\="android.widget.EditText"/></lhs><lhs name\="android.graphics.drawable.Drawable$Callback"><rhs name\="android.webkit.WebView"/><rhs name\="android.widget.TextView"/><rhs name\="android.widget.EditText"/></lhs><lhs name\="android.view.KeyEvent$Callback"><rhs name\="android.webkit.WebView"/><rhs name\="android.widget.TextView"/><rhs name\="android.widget.EditText"/></lhs><lhs name\="android.view.accessibility.AccessibilityEventSource"><rhs name\="android.webkit.WebView"/><rhs name\="android.widget.TextView"/><rhs name\="android.widget.EditText"/></lhs><lhs name\="android.widget.EditText"><rhs name\="android.widget.EditText"/></lhs><lhs name\="android.view.ViewTreeObserver$OnGlobalFocusChangeListener"><rhs name\="android.webkit.WebView"/></lhs><lhs name\="android.view.ViewGroup$OnHierarchyChangeListener"><rhs name\="android.webkit.WebView"/></lhs><lhs name\="android.widget.AbsoluteLayout"><rhs name\="android.webkit.WebView"/></lhs><lhs name\="android.view.ViewGroup"><rhs name\="android.webkit.WebView"/></lhs><lhs name\="android.view.ViewParent"><rhs name\="android.webkit.WebView"/></lhs><lhs name\="android.view.ViewManager"><rhs name\="android.webkit.WebView"/></lhs><lhs name\="android.webkit.WebView"><rhs name\="android.webkit.WebView"/></lhs></history>
+content_assist_number_of_computers=12
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+fontPropagated=true
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.formatterprofiles.version=12
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+org.eclipse.jface.textfont=1|Monaco|11.0|0|COCOA|1|;
+proposalOrderMigrated=true
+spelling_locale_initialized=true
+tabWidthPropagated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

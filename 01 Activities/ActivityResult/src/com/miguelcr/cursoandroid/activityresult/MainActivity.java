@@ -1,0 +1,49 @@
+package com.miguelcr.cursoandroid.activityresult;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.provider.ContactsContract.Contacts;
+import android.view.View;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+	
+	private static final int TESTIGO_SELECCION_CONTACTO = 1;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }  
+    
+    public void selectContact(View v) {
+    	Intent intent = new Intent(Intent.ACTION_PICK, Contacts.CONTENT_URI);
+        startActivityForResult(intent, TESTIGO_SELECCION_CONTACTO);
+    }
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (resultCode == Activity.RESULT_OK && requestCode == TESTIGO_SELECCION_CONTACTO) {
+	        // Perform a query to the contact's content provider for the contact's name
+	        Cursor cursor = getContentResolver().query(data.getData(),
+	        new String[] {Contacts.DISPLAY_NAME,ContactsContract.CommonDataKinds.Phone.NUMBER}, null, null, null);
+	       
+	        if (cursor.moveToFirst()) { // True if the cursor is not empty
+	            
+	        	int columnIndex = cursor.getColumnIndex(Contacts.DISPLAY_NAME);
+	            String name = cursor.getString(columnIndex);
+	            
+	            int columnIndexPhone = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+	            String phone = cursor.getString(columnIndexPhone);
+	            Toast.makeText(this, "Contacto seleccionado: "+name+" - "+phone,Toast.LENGTH_LONG).show();
+	            // Do something with the selected contact's name...
+	        }
+	    }
+
+	}
+    
+    
+}

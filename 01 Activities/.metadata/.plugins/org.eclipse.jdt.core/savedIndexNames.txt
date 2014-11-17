@@ -1,0 +1,6 @@
+INDEX VERSION 1.126+/Users/miguelcampos/Documents/workspace/cursoandroid/01 Activities/.metadata/.plugins/org.eclipse.jdt.core
+1401325181.index
+3741876415.index
+2392310432.index
+346744323.index
+2632221878.index
