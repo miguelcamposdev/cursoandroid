@@ -1,0 +1,20 @@
+package com.miguelcr.cursoandroid.listview;
+
+import java.util.List;
+
+import android.app.ListActivity;
+import android.widget.ArrayAdapter;
+
+public class DeporteAdapter extends ArrayAdapter<DeporteItem> {
+	
+	List<DeporteItem> listadoDeportes;
+	ListActivity contexto;
+
+	public DeporteAdapter(ListActivity context, int resource, List<DeporteItem>listadoDeportes) {
+		super(context, resource, listadoDeportes);
+		
+		this.listadoDeportes = listadoDeportes;
+		this.contexto = context;
+	}
+
+}

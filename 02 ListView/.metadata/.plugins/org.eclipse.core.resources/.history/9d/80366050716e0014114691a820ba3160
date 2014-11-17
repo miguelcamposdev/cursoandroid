@@ -1,0 +1,13 @@
+package com.miguelcr.cursoandroid.listview;
+
+import android.content.Context;
+import android.widget.ArrayAdapter;
+
+public class DeporteAdapter extends ArrayAdapter<DeporteItem> {
+
+	public DeporteAdapter(ListActivity context, int resource, DeporteItem[] objects) {
+		super(context, resource, objects);
+		// TODO Auto-generated constructor stub
+	}
+
+}

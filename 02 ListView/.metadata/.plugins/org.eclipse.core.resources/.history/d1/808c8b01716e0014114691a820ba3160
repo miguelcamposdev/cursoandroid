@@ -1,0 +1,7 @@
+package com.miguelcr.cursoandroid.listview;
+
+import android.widget.ArrayAdapter;
+
+public class DeporteAdapter extends ArrayAdapter<T> {
+
+}
