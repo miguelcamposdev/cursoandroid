@@ -1,7 +1,6 @@
 INDEX VERSION 1.126+/Users/miguelcampos/Documents/workspace/cursoandroid/03 Menus/.metadata/.plugins/org.eclipse.jdt.core
 1985231975.index
 1868156093.index
-2913098177.index
 1597902751.index
 3521075103.index
 3406088306.index
