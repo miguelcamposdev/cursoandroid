@@ -1,0 +1,20 @@
+package com.miguelcr.cursoandroid.contextualactionmode;
+
+import android.app.ListActivity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+
+public class MainActivity extends ListActivity {
+	
+	private String[] listadoSistemasOperativos = {"Android", "MACOSX","Linux","Windows","iOS"};
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice,listadoSistemasOperativos);
+        setListAdapter(adaptador);
+    }
+}

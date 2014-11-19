@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extracts string &apos;null&apos; into R.string.action_delete_all" description="Extracts string &apos;null&apos; into R.string.action_delete_all" flags="6" id="com.android.ide.eclipse.adt.refactoring.extract.string" mode="SELECT_NEW_ID" proj="/03_ContextualActionMode" rplc-all-java="false" rplc-all-xml="false" stamp="1416415814649"/>
+</session>
