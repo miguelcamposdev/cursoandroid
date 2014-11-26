@@ -64,7 +64,6 @@ public class MainActivity extends Activity implements OnMarkerClickListener,
 
 		mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-31.95285,
 				115.85734), 5));
-		mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 		
 		LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);

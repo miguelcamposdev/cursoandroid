@@ -1,14 +1,8 @@
 package com.miguelcr.maps;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.Locale;
-
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
-import android.location.Address;
-import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -64,10 +58,9 @@ public class MainActivity extends Activity implements OnMarkerClickListener,
 
 		mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-31.95285,
 				115.85734), 5));
-		mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 		
 		LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+		locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, this);
 	}
 
 	@Override
@@ -137,9 +130,6 @@ public class MainActivity extends Activity implements OnMarkerClickListener,
 	public void onLocationChanged(Location location) {
 		LatLng posicionMapa = new LatLng(location.getLatitude(), location.getLongitude());
 		marcador.setPosition(posicionMapa);
-		marcador.setSnippet(getCity(posicionMapa));
-		marcador.showInfoWindow();
-		mMap.animateCamera(CameraUpdateFactory.newLatLng(posicionMapa));
 		
 	}
 
@@ -159,23 +149,5 @@ public class MainActivity extends Activity implements OnMarkerClickListener,
 	public void onStatusChanged(String provider, int status, Bundle extras) {
 		// TODO Auto-generated method stub
 		
-	}
-	
-	public String getCity(LatLng posicion) {
-		Geocoder geocoder;
-		List<Address> addresses;
-		String city = "";
-		geocoder = new Geocoder(this, Locale.getDefault());
-		try {
-			addresses = geocoder.getFromLocation(posicion.latitude,
-					posicion.longitude, 1);
-
-			city = addresses.get(0).getAddressLine(1);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		return city;
 	}
 }
