@@ -1,0 +1,15 @@
+import java.util.List;
+
+import android.content.Context;
+import android.widget.ArrayAdapter;
+
+
+public class SistemaOperativoAdapter extends ArrayAdapter<SistemaOperativo> {
+
+	public SistemaOperativoAdapter(Context context, int textViewResourceId,
+			List<SistemaOperativo> objects) {
+		super(context, textViewResourceId, objects);
+		// TODO Auto-generated constructor stub
+	}
+
+}

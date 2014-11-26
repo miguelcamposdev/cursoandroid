@@ -90,6 +90,11 @@ public class MainActivity extends ListActivity {
 	                mode.finish(); // Action picked, so close the CAB
 	                lista.clearChoices();
 	                return true;
+	            case R.id.actionSelectAll:
+	            	for(int i=0; i<listadoSistemas.size(); i++) {
+	            		lista.setItemChecked(i, true);
+	            	}
+	                return true;
 	            default:
 	                return false;
 	        }

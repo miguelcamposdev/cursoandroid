@@ -1,0 +1,26 @@
+import java.util.List;
+
+import android.app.Activity;
+import android.widget.ArrayAdapter;
+
+import com.miguelcr.cursonandroid.listactivity.SistemaOperativo;
+
+
+public class SistemaOperativoAdapter extends ArrayAdapter<SistemaOperativo> {
+
+	Activity contexto;
+	int plantilla;
+	List<SistemaOperativo> listadoElementos;
+	
+	public SistemaOperativoAdapter(Activity context, int layoutPlantilla,
+			List<SistemaOperativo> listadoSistemasOperativos) {
+		super(context, layoutPlantilla, listadoSistemasOperativos);
+		
+		this.contexto = context;
+		this.plantilla = layoutPlantilla;
+		this.listadoElementos = listadoSistemasOperativos;
+	}
+	
+	
+
+}

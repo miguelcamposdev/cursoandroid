@@ -1,0 +1,8 @@
+package com.miguelcr.cursoandroid.equiposfutbol;
+
+public class Snippet {
+	public static void main(String[] args) {
+		com.miguelcr.cursoandroid.equiposfutbol
+	}
+}
+

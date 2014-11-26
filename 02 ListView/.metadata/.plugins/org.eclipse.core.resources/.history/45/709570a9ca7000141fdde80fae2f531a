@@ -1,0 +1,29 @@
+package com.miguelcr.cursonandroid.listactivity;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+public class MainActivity extends Activity {
+	
+	// 1. Listado de elementos
+	String[] listadoSistemasOperativos = {"Android","Windows","iOS","MACOS","Linux"};
+	private ListView lista;
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        lista = (ListView) findViewById(R.id.listViewSistemasOperativos);
+        
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listadoSistemasOperativos);
+        
+        lista.setAdapter(adaptador);
+        
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+		};
+    }
+}

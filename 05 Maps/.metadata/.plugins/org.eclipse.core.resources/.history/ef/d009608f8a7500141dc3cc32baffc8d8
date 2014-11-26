@@ -1,0 +1,43 @@
+package com.miguelcr.maps;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Toast;
+
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+public class MainActivity extends Activity implements OnMarkerClickListener {
+	
+	private GoogleMap mMap;
+	private int numClicks = 0;
+	
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        mMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.miPrimerMapa)).getMap();
+    	mMap.addMarker(new MarkerOptions()
+    	        .position(new LatLng(10, 10))
+    	        .draggable(true)
+    	        .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_marker))
+    	        .title("Hola Mundo!"));
+    	
+    	mMap.setOnMarkerClickListener(this);
+    }
+
+
+	@Override
+	public boolean onMarkerClick(Marker arg0) {
+		Toast.makeText(this, "Marker seleccionado "+numClicks+" veces", Toast.LENGTH_SHORT).show();
+		numClicks++;
+		return false;
+	}
+}

@@ -1,0 +1,45 @@
+package com.miguelcr.cursoandroid.equiposfutbol;
+
+import java.util.List;
+
+import android.app.ListActivity;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.view.View;
+
+import com.miguelcr.cursoandroid.equiposfutbol.dao.DaoMaster;
+import com.miguelcr.cursoandroid.equiposfutbol.dao.DaoMaster.DevOpenHelper;
+import com.miguelcr.cursoandroid.equiposfutbol.dao.DaoSession;
+import com.miguelcr.cursoandroid.equiposfutbol.dao.EquipoDao;
+import com.miguelcr.cursoandroid.equiposfutbol.entity.Equipo;
+
+public class MainActivity extends ListActivity {
+	
+	private SQLiteDatabase db;
+	private DaoMaster daoMaster;
+	private DaoSession daoSession;
+
+	private List<Equipo> listadoEquipos;
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        /***************  CONEXIÓN BBDD *********************/
+        
+        DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "notes-db", null);
+        db = helper.getWritableDatabase();
+        daoMaster = new DaoMaster(db);
+        daoSession = daoMaster.newSession();
+        
+        /****************************************************/
+        
+        EquipoDao equipoDao = daoSession.getEquipoDao();
+        EquipoAdapter adaptadorEquipo = new EquipoAdapter(this, R.layout.list_item_equipo, listadoEquipos);
+    }
+    
+    public void crearEquipo(View v) {
+    	
+    }
+}

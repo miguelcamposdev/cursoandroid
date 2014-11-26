@@ -4,5 +4,6 @@
     <string name="app_name">03_ContextualActionMode</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_delete_all">Borrar seleccionados</string>
+    <string name="select_all">Seleccionar todos</string>
 
 </resources>

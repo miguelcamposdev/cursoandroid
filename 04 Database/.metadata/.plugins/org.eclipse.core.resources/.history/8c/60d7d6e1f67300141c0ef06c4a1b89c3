@@ -1,0 +1,57 @@
+package com.miguelcr.cursoandroid.equiposfutbol;
+
+import java.util.List;
+
+import android.app.ListActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.miguelcr.cursoandroid.equiposfutbol.entity.Equipo;
+
+public class EquipoAdapter extends ArrayAdapter<Equipo> {
+			
+		List<Equipo> listadoDeportes;
+		ListActivity contexto;
+		int layoutPlantilla;
+
+		public EquipoAdapter(ListActivity context, int plantilla, List<Equipo>listadoDeportes) {
+			super(context, plantilla, listadoDeportes);
+			
+			this.listadoDeportes = listadoDeportes;
+			this.contexto = context;
+			this.layoutPlantilla = plantilla;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			// TODO Auto-generated method stub
+			//return super.getView(position, convertView, parent);
+
+
+			LayoutInflater inflater = contexto.getLayoutInflater();
+			convertView = inflater.inflate(layoutPlantilla, null);
+			
+			Equipo itemActual = listadoDeportes.get(position);
+			
+			// Modifico el icono del deporte de la plantilla
+			ImageView iconoDeporte = (ImageView) convertView.findViewById(R.id.imageViewEscudo);
+			iconoDeporte.setImageResource(itemActual.getIcono());
+			
+			TextView nombreDeporte = (TextView) convertView.findViewById(R.id.textView);
+			nombreDeporte.setText(itemActual.getNombre());
+			
+			
+			
+			return convertView;
+		}
+		
+		
+		
+
+	}
+
+}

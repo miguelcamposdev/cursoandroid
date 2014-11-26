@@ -1,0 +1,28 @@
+package com.miguelcr.cursoandroid.equiposfutbol;
+
+import android.app.Activity;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+
+import com.miguelcr.cursoandroid.equiposfutbol.dao.DaoMaster;
+import com.miguelcr.cursoandroid.equiposfutbol.dao.DaoMaster.DevOpenHelper;
+
+public class MainActivity extends Activity {
+	
+	private SQLiteDatabase db;
+	private DaoMaster daoMaster;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        /***************  CONEXIÓN BBDD *********************/
+        DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "notes-db", null);
+        db = helper.getWritableDatabase();
+        daoMaster = new DaoMaster(db);
+        daoSession = daoMaster.newSession();
+        noteDao = daoSession.getNoteDao();
+        /****************************************************/
+    }
+}

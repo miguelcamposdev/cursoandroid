@@ -1,0 +1,6 @@
+import android.widget.ArrayAdapter;
+
+
+public class SistemaOperativoAdapter extends ArrayAdapter<SistemaOperativo> {
+
+}

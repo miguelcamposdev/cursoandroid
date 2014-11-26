@@ -1,0 +1,17 @@
+import java.util.List;
+
+import android.content.Context;
+import android.widget.ArrayAdapter;
+
+import com.miguelcr.cursonandroid.listactivity.SistemaOperativo;
+
+
+public class SistemaOperativoAdapter extends ArrayAdapter<SistemaOperativo> {
+
+	public SistemaOperativoAdapter(Context context, int layoutPlantilla,
+			List<SistemaOperativo> listadoSistemasOperativos) {
+		super(context, layoutPlantilla, listadoSistemasOperativos);
+		// TODO Auto-generated constructor stub
+	}
+
+}

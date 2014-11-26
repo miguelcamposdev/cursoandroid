@@ -1,0 +1,58 @@
+package com.cursoandroid.resttemplate;
+
+import java.util.List;
+
+import com.miguelcr.di.customlistview.MarcaTiempo;
+
+import android.app.Activity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class UserAdapter extends ArrayAdapter<User> {
+	
+	private List<User> marcasTiempo;
+	Activity context;
+	int layoutMolde;
+
+	public UserAdapter(Activity context, int layout,
+			List<User> listadoTiempos) {
+		super(context, layout, listadoTiempos);
+		marcasTiempo = listadoTiempos;
+		this.context = context;
+		this.layoutMolde = layout;
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public View getView(int position, View moldeVacio, ViewGroup parent) {
+		// TODO Auto-generated method stub
+		//return super.getView(position, convertView, parent);
+		
+		LayoutInflater inflater = context.getLayoutInflater();
+		
+		moldeVacio = inflater.inflate(layoutMolde, null);
+		
+		// Si optamos por eliminar del constructor del Adaptador el 
+		// parámetro del layout que utilizamos como molde, podríamos 
+		// hacerlo de la siguiente manera:
+		//convertView = inflater.inflate(R.layout.list_item_fruta, null);
+	
+		
+		User userActual = marcasTiempo.get(position);
+		
+		// Rescato los elementos del molde para modificarlos con el nombre y el icono de la fruta actual
+		TextView nombreEmail = (TextView) moldeVacio.findViewById(R.id.textViewNombre);
+		TextView fact = (TextView) moldeVacio.findViewById(R.id.textViewFact);
+		
+		iconoFruta.setImageResource(tiempoActual.getIcono());
+		nombreFruta.setText(tiempoActual.getNombre().toUpperCase());
+		
+		
+		return moldeVacio;
+	}
+
+}

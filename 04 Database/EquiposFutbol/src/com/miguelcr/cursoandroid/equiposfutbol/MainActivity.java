@@ -1,0 +1,73 @@
+package com.miguelcr.cursoandroid.equiposfutbol;
+
+import java.util.List;
+
+import android.app.ListActivity;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.miguelcr.cursoandroid.equiposfutbol.dao.DaoMaster;
+import com.miguelcr.cursoandroid.equiposfutbol.dao.DaoMaster.DevOpenHelper;
+import com.miguelcr.cursoandroid.equiposfutbol.dao.DaoSession;
+import com.miguelcr.cursoandroid.equiposfutbol.dao.EquipoDao;
+import com.miguelcr.cursoandroid.equiposfutbol.entity.Equipo;
+
+public class MainActivity extends ListActivity {
+	
+	private SQLiteDatabase db;
+	private DaoMaster daoMaster;
+	private DaoSession daoSession;
+	private EditText nombreEquipo;
+	private EquipoDao equipoDao;
+	private EquipoAdapter adaptadorEquipo;
+
+	private List<Equipo> listadoEquipos;
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        nombreEquipo = (EditText) findViewById(R.id.editTextNombreEquipo);
+        
+        /***************  CONEXIÓN BBDD *********************/
+        
+        DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "notes-db", null);
+        db = helper.getWritableDatabase();
+        daoMaster = new DaoMaster(db);
+        daoSession = daoMaster.newSession();
+        
+        /****************************************************/
+        
+        equipoDao = daoSession.getEquipoDao();
+        listadoEquipos = equipoDao.loadAll();
+        adaptadorEquipo = new EquipoAdapter(this, R.layout.list_item_equipo, listadoEquipos);
+   
+        setListAdapter(adaptadorEquipo);
+        
+        if(listadoEquipos.size()==0) {
+        	Toast.makeText(this, "No hay equipos en la Base de datos", Toast.LENGTH_LONG).show();
+        }
+    }
+    
+    public void crearEquipo(View v) {
+    	Equipo nuevoEquipo = new Equipo();
+    	nuevoEquipo.setNombre(nombreEquipo.getText().toString());
+    	nuevoEquipo.setEscudo("ic_coruna");
+    	
+    	equipoDao.insert(nuevoEquipo);
+    	
+    	refrescarLisView();
+    	
+    }
+
+	private void refrescarLisView() {
+		listadoEquipos.clear();
+		listadoEquipos.addAll(equipoDao.loadAll());
+		adaptadorEquipo.notifyDataSetChanged();
+		
+	}
+}

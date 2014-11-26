@@ -1,0 +1,7 @@
+package com.miguelcr.cursoandroid.equiposfutbol;
+
+import android.widget.ArrayAdapter;
+
+public class EquipoAdapter extends ArrayAdapter<Equipo> {
+
+}

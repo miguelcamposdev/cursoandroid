@@ -1,0 +1,39 @@
+package com.cursoandroid.resttemplate;
+
+public class User {
+	private String nombre;
+	private String email;
+	private String fact;
+
+	public User(String nombre, String email, String fact) {
+		super();
+		this.nombre = nombre;
+		this.email = email;
+		this.fact = fact;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getFact() {
+		return fact;
+	}
+
+	public void setFact(String fact) {
+		this.fact = fact;
+	}
+
+}

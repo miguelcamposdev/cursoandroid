@@ -1,0 +1,7 @@
+package com.miguelcr.cursonandroid.listactivity;
+
+public class SistemaOperativo {
+	private String nombre;
+	private int anyo;
+	private int icono;
+}

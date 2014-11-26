@@ -1,0 +1,24 @@
+package com.miguelcr.maps;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+public class MainActivity extends Activity {
+	
+	private GoogleMap mMap;
+	
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        mMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
+    	mMap.addMarker(new MarkerOptions()
+    	        .position(new LatLng(10, 10))
+    	        .title("Hello world"));
+    }
+}

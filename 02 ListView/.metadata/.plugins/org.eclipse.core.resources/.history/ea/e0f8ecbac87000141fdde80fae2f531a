@@ -1,0 +1,18 @@
+package com.miguelcr.cursonandroid.listactivity;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+public class MainActivity extends Activity {
+	
+	// 1. Listado de elementos
+	String[] listadoSistemasOperativos = {"Android","Windows","iOS","MACOS","Linux"};
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}

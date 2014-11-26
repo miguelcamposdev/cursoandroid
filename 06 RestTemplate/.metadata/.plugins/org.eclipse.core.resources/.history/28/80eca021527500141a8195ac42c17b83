@@ -1,0 +1,7 @@
+package com.cursoandroid.resttemplate;
+
+import android.widget.ArrayAdapter;
+
+public class UserAdapter extends ArrayAdapter<User> {
+
+}

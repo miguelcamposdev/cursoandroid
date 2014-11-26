@@ -1,0 +1,32 @@
+package com.miguelcr.cursonandroid.listactivity;
+
+import android.app.ListActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+public class MainActivity extends ListActivity {
+	
+	// 1. Listado de elementos
+	String[] listadoSistemasOperativos = {"Android","Windows","iOS","MACOS","Linux"};
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+                
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listadoSistemasOperativos);
+        
+        setListAdapter(adaptador);
+        
+    }
+    
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+    	// TODO Auto-generated method stub
+    	super.onListItemClick(l, v, position, id);
+Toast.makeText(this, "Has seleccionado: "+position, Toast.LENGTH_LONG).show();
+    }
+}

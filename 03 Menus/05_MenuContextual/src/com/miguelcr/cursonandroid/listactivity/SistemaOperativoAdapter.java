@@ -1,0 +1,52 @@
+package com.miguelcr.cursonandroid.listactivity;
+import java.util.List;
+
+import android.app.Activity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.miguelcr.cursonandroid.listactivity.R;
+
+
+public class SistemaOperativoAdapter extends ArrayAdapter<SistemaOperativo> {
+
+	Activity contexto;
+	int plantilla;
+	List<SistemaOperativo> listadoElementos;
+	
+	public SistemaOperativoAdapter(Activity context, int layoutPlantilla,
+			List<SistemaOperativo> listadoSistemasOperativos) {
+		super(context, layoutPlantilla, listadoSistemasOperativos);
+		
+		this.contexto = context;
+		this.plantilla = layoutPlantilla;
+		this.listadoElementos = listadoSistemasOperativos;
+	}
+	
+	@Override
+	public View getView(int position, View plantillaPersonalizada, ViewGroup parent) {
+		
+		LayoutInflater inflater = contexto.getLayoutInflater();
+		plantillaPersonalizada = inflater.inflate(plantilla, null);
+		
+		
+		SistemaOperativo itemActual = listadoElementos.get(position);
+		
+		ImageView icono = (ImageView) plantillaPersonalizada.findViewById(R.id.imageViewIcono);
+		TextView nombre = (TextView) plantillaPersonalizada.findViewById(R.id.textViewNombre);
+		TextView anyo = (TextView) plantillaPersonalizada.findViewById(R.id.textViewAnyo);
+		
+		icono.setImageResource(itemActual.getIcono());
+		nombre.setText(itemActual.getNombre());
+		anyo.setText(String.valueOf(itemActual.getAnyo()));
+		
+		return plantillaPersonalizada;
+	}
+	
+	
+
+}

@@ -1,0 +1,23 @@
+package com.miguelcr.cursonandroid.listactivity;
+
+import android.app.ListActivity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+public class MainActivity extends ListActivity {
+	
+	// 1. Listado de elementos
+	String[] listadoSistemasOperativos = {"Android","Windows","iOS","MACOS","Linux"};
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+                
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listadoSistemasOperativos);
+        
+        setListAdapter(adaptador);
+        
+    }
+}
